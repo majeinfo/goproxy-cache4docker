@@ -3,6 +3,16 @@
 [![GoDoc](https://godoc.org/github.com/elazarl/goproxy?status.svg)](https://godoc.org/github.com/elazarl/goproxy)
 [![Join the chat at https://gitter.im/elazarl/goproxy](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/elazarl/goproxy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+This is a copy of elazarl/goproxy where I added in the examples/ directory code to implement
+a Proxy-Cache that handles Docker images only. The code is in examples/goproxy-cache/.
+
+Why ? During my trainings I may have many users that needs to download the same Docker Images.
+I don't want a local Registry and I need performance. So I ask them to set a proxy with http_proxy 
+and https_proxy environment variable, then they start the Docker daemon.
+The goproxy-cache can then download and distribute the Image Layers.
+
+All the following information comes from the original repository
+--------------------------------------------------------------------------------------------
 Package goproxy provides a customizable HTTP proxy library for Go (golang),
 
 It supports regular HTTP proxy, HTTPS through CONNECT, and "hijacking" HTTPS
